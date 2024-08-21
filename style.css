@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+:root {
+    --green:  hsl(169, 82%, 27%);
+    --hover:  hsl(148, 38%, 91%);
+}
+
+ /* general code  */
+
+body {
+    background-color: hsl(148, 38%, 91%);
+    font-family: karla;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 120vh;    
+}
+
+section {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    margin: auto;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+    width: auto;
+    margin: auto;
+    border: none;
+    border-radius: 5px;
+}
+
+/* content code */
+
+h1 {
+    align-self: start;
+    margin-top: 0px;
+}
+
+#firstname, #lastname, #useremail {
+    border: 0.5px solid;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#firstname, #lastname, #useremail, #message, .checkbox {
+    margin-top: 5px;
+    margin-bottom: 19px; 
+}
+
+.enquiry-cont, .support-cont{
+    border: 0.5px solid;
+    border-radius: 5px;
+    margin: 5px 0;
+    padding: 10px;
+}
+
+textarea {
+    max-height: 200px;
+    min-height: 200px;
+    min-width: 350px;
+    max-width: 350px;
+}
+
+.submit {
+    padding: 10px;
+    background-color: var(--green);
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+span {
+    color: var(--green);
+}
+
+/* Hover state */
+
+.submit:hover{
+    background-color: hsl(169, 89%, 14%);
+    cursor: pointer;
+}
+
+#firstname:hover, #lastname:hover, #useremail:hover {
+    border: 1.5px solid;
+    border-color: var(--green);
+    cursor: pointer;
+}
+
+/* media queries  */
+
+@media (min-width: 1440px){
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+}
