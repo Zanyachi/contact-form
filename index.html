@@ -8,6 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <link href="/fontawesome/css/fontawesome.css" rel="stylesheet">
+  <link href="/fontawesome/css/brands.css" rel="stylesheet">
+  <link href="/fontawesome/css/solid.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   
   <title>Frontend Mentor | Contact form</title>
@@ -19,38 +22,68 @@
   </style> -->
 </head>
 <body>
-
+  
+  <aside class="submit-message">
+    <h3><i class="fa-solid fa-circle-check"></i>Message Sent!</h3>
+    <p class="alert-paragraph">Thanks for completing the form, We'll be in contact soon!</p>
+  </aside>
+  
   <section>
     <h1> 
       Contact Us
     </h1>
     <!-- contact info input  -->
     <form>
+
+     <div class="firstname-cont container">
       <label for="fname">First Name &nbsp;<span>*</span></label><br>
-      <!-- This field is required  -->
       <input type="text" id="firstname" name="fname" required><br>
+      <p class="error-message firstname-error">This field is required</p> 
+     </div>
+
+     <div class="lastname-cont container">
       <label for="lname">Last Name &nbsp;<span>*</span></label><br>
-       <!-- This field is required  -->
       <input type="text" id="lastname" name="lname" required><br>
+      <p class="error-message lastname-error">This field is required</p> 
+     </div>
+
+     <div class="useremail-cont container">
       <label for="email">Email Address &nbsp;<span>*</span></label><br>
       <input type="email" id="useremail" name="email" required><br>
+      <p class="error-message email-error">This field is required</p>
+     </div> 
+
 
       <!-- query type form -->
 
+     
       <label for="query">Query Type &nbsp;<span>*</span></label><br>
      <div class="enquiry-cont">
-      <input type="radio" id="enquiry" name="enquiry" required>
+      <input type="radio" id="enquiry" name="query" value="enquiry" required>
       <label for="enquiry">General Enquiry &nbsp;</label> <br>
      </div>
+
      <div class="support-cont">
-      <input type="radio" id="support" name="support" required>
+      <input type="radio" id="support" name="query" value="support" required>
       <label for="support">Support Request</label><br>
      </div>
+     <p class="error-message query-error">Please select a query type</p>
+
+     <div class="message-cont container">
       <label for="message">Message &nbsp;<span>*</span></label><br>
       <textarea id="message" name="messagebox" rows="4" cols="6"></textarea><br>
-      <div class="consent-cont"><input type="checkbox" name="consentbox" class="checkbox" required>
-        <label for="consent">I consent to being contacted by the team</label><br></div>
+      <p class="error-message text-error">This field is required</p>
+     </div> 
+
+
+      <div class="consent-cont container"><input type="checkbox" name="consentbox" class="checkbox" required>
+      <label for="consent">I consent to being contacted by the team &nbsp;<span>*</span></label><br>
+      <p class="error-message submit-error">To submit this form, please consent to being contacted</p>
+      </div>
+      
+      
       <input type="submit" name="submit" class="submit" value="Submit">
+
     </form>
 
 <!--     
@@ -86,5 +119,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  <script src="index.js"></script>
 </body>
 </html>
